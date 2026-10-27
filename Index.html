@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maîtrise Plus DIGITALES</title>
+<style>
+  :root{--bg:#0b1220;--card:#141d33;--text:#f2f5fb;--muted:#9aa7c2;--gold:#f5b301;--green:#25d366}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+  header{text-align:center;padding:48px 20px 32px;background:linear-gradient(160deg,#16244a,#0b1220)}
+  header h1{font-size:28px;color:var(--gold)}
+  header p{color:var(--muted);margin:10px auto 20px;max-width:480px}
+  .btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:bold;text-decoration:none;font-size:15px}
+  .btn-gold{background:var(--gold);color:#111}
+  .btn-wa{background:var(--green);color:#fff}
+  section{padding:32px 16px;max-width:1000px;margin:auto}
+  h2{text-align:center;margin-bottom:20px;font-size:22px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:var(--card);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .cover{height:140px;display:flex;align-items:center;justify-content:center;font-size:52px;background:linear-gradient(135deg,#1f3a7a,#0e1a38)}
+  .cover img{width:100%;height:100%;object-fit:cover}
+  .body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .body h3{font-size:17px}
+  .body p{color:var(--muted);font-size:14px;flex:1}
+  .price{font-size:18px;font-weight:bold;color:var(--gold)}
+  .price s{color:var(--muted);font-weight:normal;font-size:14px;margin-left:8px}
+
+  .free{color:var(--green)}
+  .tem{background:var(--card);border-radius:14px;padding:16px}
+  .tem p{font-style:italic;color:var(--muted);font-size:14px}
+  .tem b{display:block;margin-top:8px;font-size:14px}
+  footer{text-align:center;padding:30px 16px 50px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Maîtrise Plus DIGITALES</h1>
+  <p>Ebooks et formations pour apprendre, entreprendre et vendre en ligne.</p>
+  <a class="btn btn-gold" href="https://qnmiqbdt.mychariow.shop" target="_blank">Voir toute la boutique</a>
+</header>
+
+<section>
+  <h2>Nos produits</h2>
+  <div class="grid" id="produits"></div>
+</section>
+
+<section>
+  <h2>Ils nous font confiance</h2>
+  <div class="grid">
+    <!-- REMPLACE par de vrais avis de tes clients -->
+    <div class="tem"><p>« Écris ici le vrai message d’un client. »</p><b>— Prénom du client</b></div>
+    <div class="tem"><p>« Écris ici le vrai message d’un client. »</p><b>— Prénom du client</b></div>
+    <div class="tem"><p>« Écris ici le vrai message d’un client. »</p><b>— Prénom du client</b></div>
+  </div>
+</section>
+
+<section style="text-align:center">
+  <h2>Une question ?</h2>
+  <a class="btn btn-wa" href="https://wa.me/2250594913999" target="_blank">Écrire sur WhatsApp</a>
+</section>
+
+<footer>© Maîtrise Plus DIGITALES — Abidjan</footer>
+
+<script>
+// ====== MODIFIE ICI TES PRODUITS ======
+// image : mets le lien d'une image de couverture, ou laisse "" pour afficher l'emoji
+// ancien : prix barré (laisse "" s'il n'y en a pas) ; prix : "Gratuit" pour un produit gratuit
+// lien : remplace par le lien exact du produit sur Chariow
+var BOUTIQUE = "https://qnmiqbdt.mychariow.shop";
+var produits = [
+  {emoji:"📖", titre:"Apprendre une sourate en 15 minutes", desc:"Méthode simple pour mémoriser une sourate un peu chaque jour.", prix:"À compléter", ancien:"", image:"", lien:BOUTIQUE},
+  {emoji:"🎁", titre:"Sourate en 15 minutes (version gratuite)", desc:"Découvre la méthode gratuitement.", prix:"Gratuit", ancien:"", image:"", lien:BOUTIQUE},
+  {emoji:"🤖", titre:"Publications avec l’IA", desc:"Crée des publications attractives rapidement grâce à l’IA.", prix:"À compléter", ancien:"", image:"", lien:BOUTIQUE},
+  {emoji:"⚠️", titre:"Les erreurs qui empêchent de vendre sur Chariow", desc:"Évite les erreurs classiques et commence à vendre.", prix:"Gratuit", ancien:"", image:"", lien:BOUTIQUE},
+  {emoji:"🌍", titre:"Vendre partout en Afrique avec Chariow", desc:"Guide pratique pour vendre tes produits digitaux.", prix:"2300 F", ancien:"3500 F", image:"", lien:BOUTIQUE},
+  {emoji:"🚀", titre:"De Zéro à Premier Client", desc:"Trouve ton premier client étape par étape.", prix:"À compléter", ancien:"", image:"", lien:BOUTIQUE},
+  {emoji:"🗂️", titre:"Organisation Sans Stress", desc:"Organise ton temps et tes tâches simplement.", prix:"À compléter", ancien:"", image:"", lien:BOUTIQUE},
+  {emoji:"📣", titre:"Guide Marketing Digital", desc:"Les bases pour promouvoir ton activité en ligne.", prix:"1500 F", ancien:"2000 F", image:"", lien:BOUTIQUE},
+  {emoji:"📈", titre:"Ebook Trading — Stratégie SMC", desc:"Comprendre la stratégie SMC, pensé pour les débutants.", prix:"2000 F", ancien:"3000 F", image:"", lien:BOUTIQUE}
+];
+// =======================================
+
+var html = "";
+produits.forEach(function(p){
+  var cover = p.image ? '<img src="'+p.image+'" alt="'+p.titre+'">' : p.emoji;
+  var gratuit = p.prix === "Gratuit" ? " free" : "";
+  var ancien = p.ancien ? "<s>"+p.ancien+"</s>" : "";
+  html += '<div class="card"><div class="cover">'+cover+'</div><div class="body">'
+        + '<h3>'+p.titre+'</h3><p>'+p.desc+'</p>'
+        + '<div class="price'+gratuit+'">'+p.prix+ancien+'</div>'
+        + '<a class="btn btn-gold" href="'+p.lien+'" target="_blank">Obtenir</a></div></div>';
+});
+document.getElementById("produits").innerHTML = html;
+</script>
+</body>
+</html>
