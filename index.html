@@ -29,6 +29,12 @@
   .tem{background:var(--card);border-radius:14px;padding:16px}
   .tem p{font-style:italic;color:var(--muted);font-size:14px}
   .tem b{display:block;margin-top:8px;font-size:14px}
+  .info{background:var(--card);border-radius:14px;padding:16px}
+  .info h3{font-size:16px;margin-bottom:6px;color:var(--gold)}
+  .info p{color:var(--muted);font-size:14px}
+  .liste{list-style:none;display:grid;gap:10px}
+  .liste li{background:var(--card);border-radius:12px;padding:14px 16px;font-size:15px}
+  .liste li::before{content:"✅ "}
   footer{text-align:center;padding:30px 16px 50px;color:var(--muted);font-size:14px}
 </style>
 </head>
@@ -45,13 +51,36 @@
   <div class="grid" id="produits"></div>
 </section>
 
-<section>
+<!-- CE QUE TU VAS APPRENDRE -->
+<section id="apprendre">
+  <h2>Ce que tu vas apprendre</h2>
+  <div class="grid">
+    <div class="info"><h3>📖 Sourate en 15 minutes</h3><p>Une méthode simple pour apprendre une sourate un peu chaque jour.</p></div>
+    <div class="info"><h3>🤖 Publications avec l'IA</h3><p>Créer des publications pour tes réseaux plus vite avec l'intelligence artificielle.</p></div>
+    <div class="info"><h3>🛒 Vendre sur Chariow</h3><p>Éviter les erreurs courantes et vendre partout en Afrique.</p></div>
+    <div class="info"><h3>🎯 De Zéro à Premier Client</h3><p>Les étapes pour décrocher ton premier client en ligne.</p></div>
+    <div class="info"><h3>🗂️ Organisation Sans Stress</h3><p>Mieux t'organiser au quotidien, sans te sentir débordé.</p></div>
+    <div class="info"><h3>📣 Marketing digital</h3><p>Les bases pour promouvoir ton activité en ligne.</p></div>
+    <div class="info"><h3>📈 Trading SMC</h3><p>Comprendre les bases de l'approche SMC pour analyser les marchés.</p></div>
+  </div>
+</section>
+
+<!-- POUR QUI -->
+<section id="pour-qui">
+  <h2>Pour qui sont nos produits ?</h2>
+  <ul class="liste">
+    <li>Pour les débutants qui veulent apprendre pas à pas</li>
+    <li>Pour les étudiants et jeunes qui veulent se lancer en ligne</li>
+    <li>Pour ceux qui veulent vendre leurs produits ou services</li>
+    <li>Pour ceux qui n'ont qu'un téléphone et peu de temps</li>
+  </ul>
+</section>
+
+<!-- AVIS CLIENTS : caché. Remplace par de vrais avis puis enlève le mot "hidden" -->
+<section id="avis" hidden>
   <h2>Ils nous font confiance</h2>
   <div class="grid">
-    <!-- REMPLACE par de vrais avis de tes clients -->
-    <div class="tem"><p>« Écris ici le vrai message d’un client. »</p><b>— Prénom du client</b></div>
-    <div class="tem"><p>« Écris ici le vrai message d’un client. »</p><b>— Prénom du client</b></div>
-    <div class="tem"><p>« Écris ici le vrai message d’un client. »</p><b>— Prénom du client</b></div>
+    <div class="tem"><p>« Écris ici le vrai message d'un client. »</p><b>— Prénom du client</b></div>
   </div>
 </section>
 
@@ -104,6 +133,7 @@ document.getElementById("produits").innerHTML = html;
 </script>
 </body>
 </html>
+
 
 
 
