@@ -63,19 +63,30 @@
 <footer>© Maîtrise Plus DIGITALES — Abidjan</footer>
 
 <script>
-// ====== MODIFIE ICI TES PRODUITS ======
-// image : nom du fichier image envoyé sur GitHub, ou "" pour afficher l'emoji
-// ancien : prix barré (laisse "" s'il n'y en a pas) ; prix : "Gratuit" pour un produit gratuit
+// ====== IMAGES (échange les noms ici si une image est sur le mauvais produit) ======
+var IMG = {
+  sourate:       "IMG_2032.png",
+  gratuit:       "IMG_2038.jpeg",
+  ia:            "IMG_2079.png",
+  erreurs:       "IMG_2102.png",
+  afrique:       "IMG_2154.png",
+  premierClient: "IMG_2184.jpeg",
+  organisation:  "IMG_2211.png",
+  marketing:     "IMG_2221.png",
+  trading:       "IMG_2223.jpeg"
+};
+
+// ====== PRODUITS ======
 var produits = [
-  {emoji:"📖", titre:"Une sourate en 15 minutes", desc:"La méthode simple pour apprendre le Coran en 15 minutes par jour.", prix:"2500 F", ancien:"5000 F", image:"sourate.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_m2draua9"},
-  {emoji:"🎁", titre:"Une sourate en 15 minutes (gratuit)", desc:"La méthode simple pour apprendre le Coran.", prix:"Gratuit", ancien:"", image:"sourate-gratuit.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_iryl0erl"},
-  {emoji:"🤖", titre:"Créer ses publications avec l’IA", desc:"Crée des publications attractives rapidement grâce à l’IA.", prix:"2000 F", ancien:"5000 F", image:"ia.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_x5ct5gk9"},
-  {emoji:"⚠️", titre:"Les erreurs qui t’empêchent de vendre sur Chariow", desc:"Évite les erreurs classiques et commence à vendre.", prix:"Gratuit", ancien:"", image:"erreurs.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_uul1nz9p"},
-  {emoji:"🌍", titre:"Vendez partout en Afrique et au-delà grâce à Chariow", desc:"Plateforme clé en main pour vendre tes produits digitaux.", prix:"2300 F", ancien:"3500 F", image:"afrique.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_qjr5j2vu"},
-  {emoji:"🚀", titre:"De Zéro à Premier Client", desc:"Lance ton business en ligne avec l’IA.", prix:"1850 F", ancien:"2500 F", image:"premier-client.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_4s0rqo8r"},
-  {emoji:"🗂️", titre:"Organisation Sans Stress – Pack Complet", desc:"Organise ton temps et tes tâches simplement.", prix:"1750 F", ancien:"2500 F", image:"organisation.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_6g2mnon7"},
-  {emoji:"📣", titre:"Le guide pratique marketing digital", desc:"Les bases pour promouvoir ton activité en ligne.", prix:"1500 F", ancien:"2000 F", image:"marketing.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_rbtjfld3"},
-  {emoji:"📈", titre:"Ebook de formation en Trading sur le SMC", desc:"Comprendre la stratégie SMC, pensé pour les débutants.", prix:"3500 F", ancien:"5000 F", image:"trading.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_ei1al2il"}
+  {emoji:"📖", titre:"Une sourate en 15 minutes", desc:"La méthode simple pour apprendre le Coran en 15 minutes par jour.", prix:"2500 F", ancien:"5000 F", image:IMG.sourate, lien:"https://qnmiqbdt.mychariow.shop/prd_m2draua9"},
+  {emoji:"🎁", titre:"Une sourate en 15 minutes (gratuit)", desc:"La méthode simple pour apprendre le Coran.", prix:"Gratuit", ancien:"", image:IMG.gratuit, lien:"https://qnmiqbdt.mychariow.shop/prd_iryl0erl"},
+  {emoji:"🤖", titre:"Créer ses publications avec l’IA", desc:"Crée des publications attractives rapidement grâce à l’IA.", prix:"2000 F", ancien:"5000 F", image:IMG.ia, lien:"https://qnmiqbdt.mychariow.shop/prd_x5ct5gk9"},
+  {emoji:"⚠️", titre:"Les erreurs qui t’empêchent de vendre sur Chariow", desc:"Évite les erreurs classiques et commence à vendre.", prix:"Gratuit", ancien:"", image:IMG.erreurs, lien:"https://qnmiqbdt.mychariow.shop/prd_uul1nz9p"},
+  {emoji:"🌍", titre:"Vendez partout en Afrique et au-delà grâce à Chariow", desc:"Plateforme clé en main pour vendre tes produits digitaux.", prix:"2300 F", ancien:"3500 F", image:IMG.afrique, lien:"https://qnmiqbdt.mychariow.shop/prd_qjr5j2vu"},
+  {emoji:"🚀", titre:"De Zéro à Premier Client", desc:"Lance ton business en ligne avec l’IA.", prix:"1850 F", ancien:"2500 F", image:IMG.premierClient, lien:"https://qnmiqbdt.mychariow.shop/prd_4s0rqo8r"},
+  {emoji:"🗂️", titre:"Organisation Sans Stress – Pack Complet", desc:"Organise ton temps et tes tâches simplement.", prix:"1750 F", ancien:"2500 F", image:IMG.organisation, lien:"https://qnmiqbdt.mychariow.shop/prd_6g2mnon7"},
+  {emoji:"📣", titre:"Le guide pratique marketing digital", desc:"Les bases pour promouvoir ton activité en ligne.", prix:"1500 F", ancien:"2000 F", image:IMG.marketing, lien:"https://qnmiqbdt.mychariow.shop/prd_rbtjfld3"},
+  {emoji:"📈", titre:"Ebook de formation en Trading sur le SMC", desc:"Comprendre la stratégie SMC, pensé pour les débutants.", prix:"3500 F", ancien:"5000 F", image:IMG.trading, lien:"https://qnmiqbdt.mychariow.shop/prd_ei1al2il"}
 ];
 // =======================================
 
@@ -93,4 +104,5 @@ document.getElementById("produits").innerHTML = html;
 </script>
 </body>
 </html>
+
 
