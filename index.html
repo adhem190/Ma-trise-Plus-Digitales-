@@ -18,14 +18,13 @@
   h2{text-align:center;margin-bottom:20px;font-size:22px}
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
   .card{background:var(--card);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-  .cover{height:140px;display:flex;align-items:center;justify-content:center;font-size:52px;background:linear-gradient(135deg,#1f3a7a,#0e1a38)}
+  .cover{height:220px;display:flex;align-items:center;justify-content:center;font-size:52px;background:linear-gradient(135deg,#1f3a7a,#0e1a38)}
   .cover img{width:100%;height:100%;object-fit:cover}
   .body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
   .body h3{font-size:17px}
   .body p{color:var(--muted);font-size:14px;flex:1}
   .price{font-size:18px;font-weight:bold;color:var(--gold)}
   .price s{color:var(--muted);font-weight:normal;font-size:14px;margin-left:8px}
-
   .free{color:var(--green)}
   .tem{background:var(--card);border-radius:14px;padding:16px}
   .tem p{font-style:italic;color:var(--muted);font-size:14px}
@@ -65,26 +64,24 @@
 
 <script>
 // ====== MODIFIE ICI TES PRODUITS ======
-// image : mets le lien d'une image de couverture, ou laisse "" pour afficher l'emoji
+// image : nom du fichier image envoyé sur GitHub, ou "" pour afficher l'emoji
 // ancien : prix barré (laisse "" s'il n'y en a pas) ; prix : "Gratuit" pour un produit gratuit
-// lien : remplace par le lien exact du produit sur Chariow
-var BOUTIQUE = "https://qnmiqbdt.mychariow.shop";
 var produits = [
-  {emoji:"📖", titre:"Apprendre une sourate en 15 minutes", desc:"Méthode simple pour mémoriser une sourate un peu chaque jour.", prix:"À compléter", ancien:"", image:"", lien:BOUTIQUE},
-  {emoji:"🎁", titre:"Sourate en 15 minutes (version gratuite)", desc:"Découvre la méthode gratuitement.", prix:"Gratuit", ancien:"", image:"", lien:BOUTIQUE},
-  {emoji:"🤖", titre:"Publications avec l’IA", desc:"Crée des publications attractives rapidement grâce à l’IA.", prix:"À compléter", ancien:"", image:"", lien:BOUTIQUE},
-  {emoji:"⚠️", titre:"Les erreurs qui empêchent de vendre sur Chariow", desc:"Évite les erreurs classiques et commence à vendre.", prix:"Gratuit", ancien:"", image:"", lien:BOUTIQUE},
-  {emoji:"🌍", titre:"Vendre partout en Afrique avec Chariow", desc:"Guide pratique pour vendre tes produits digitaux.", prix:"2300 F", ancien:"3500 F", image:"", lien:BOUTIQUE},
-  {emoji:"🚀", titre:"De Zéro à Premier Client", desc:"Trouve ton premier client étape par étape.", prix:"À compléter", ancien:"", image:"", lien:BOUTIQUE},
-  {emoji:"🗂️", titre:"Organisation Sans Stress", desc:"Organise ton temps et tes tâches simplement.", prix:"À compléter", ancien:"", image:"", lien:BOUTIQUE},
-  {emoji:"📣", titre:"Guide Marketing Digital", desc:"Les bases pour promouvoir ton activité en ligne.", prix:"1500 F", ancien:"2000 F", image:"", lien:BOUTIQUE},
-  {emoji:"📈", titre:"Ebook Trading — Stratégie SMC", desc:"Comprendre la stratégie SMC, pensé pour les débutants.", prix:"2000 F", ancien:"3000 F", image:"", lien:BOUTIQUE}
+  {emoji:"📖", titre:"Une sourate en 15 minutes", desc:"La méthode simple pour apprendre le Coran en 15 minutes par jour.", prix:"2500 F", ancien:"5000 F", image:"sourate.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_m2draua9"},
+  {emoji:"🎁", titre:"Une sourate en 15 minutes (gratuit)", desc:"La méthode simple pour apprendre le Coran.", prix:"Gratuit", ancien:"", image:"sourate-gratuit.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_iryl0erl"},
+  {emoji:"🤖", titre:"Créer ses publications avec l’IA", desc:"Crée des publications attractives rapidement grâce à l’IA.", prix:"2000 F", ancien:"5000 F", image:"ia.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_x5ct5gk9"},
+  {emoji:"⚠️", titre:"Les erreurs qui t’empêchent de vendre sur Chariow", desc:"Évite les erreurs classiques et commence à vendre.", prix:"Gratuit", ancien:"", image:"erreurs.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_uul1nz9p"},
+  {emoji:"🌍", titre:"Vendez partout en Afrique et au-delà grâce à Chariow", desc:"Plateforme clé en main pour vendre tes produits digitaux.", prix:"2300 F", ancien:"3500 F", image:"afrique.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_qjr5j2vu"},
+  {emoji:"🚀", titre:"De Zéro à Premier Client", desc:"Lance ton business en ligne avec l’IA.", prix:"1850 F", ancien:"2500 F", image:"premier-client.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_4s0rqo8r"},
+  {emoji:"🗂️", titre:"Organisation Sans Stress – Pack Complet", desc:"Organise ton temps et tes tâches simplement.", prix:"1750 F", ancien:"2500 F", image:"organisation.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_6g2mnon7"},
+  {emoji:"📣", titre:"Le guide pratique marketing digital", desc:"Les bases pour promouvoir ton activité en ligne.", prix:"1500 F", ancien:"2000 F", image:"marketing.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_rbtjfld3"},
+  {emoji:"📈", titre:"Ebook de formation en Trading sur le SMC", desc:"Comprendre la stratégie SMC, pensé pour les débutants.", prix:"3500 F", ancien:"5000 F", image:"trading.jpg", lien:"https://qnmiqbdt.mychariow.shop/prd_ei1al2il"}
 ];
 // =======================================
 
 var html = "";
 produits.forEach(function(p){
-  var cover = p.image ? '<img src="'+p.image+'" alt="'+p.titre+'">' : p.emoji;
+  var cover = p.image ? '<img src="'+p.image+'" alt="'+p.titre+'" loading="lazy">' : p.emoji;
   var gratuit = p.prix === "Gratuit" ? " free" : "";
   var ancien = p.ancien ? "<s>"+p.ancien+"</s>" : "";
   html += '<div class="card"><div class="cover">'+cover+'</div><div class="body">'
@@ -96,3 +93,4 @@ document.getElementById("produits").innerHTML = html;
 </script>
 </body>
 </html>
+
