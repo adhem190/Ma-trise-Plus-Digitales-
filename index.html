@@ -26,15 +26,16 @@
   .price{font-size:18px;font-weight:bold;color:var(--gold)}
   .price s{color:var(--muted);font-weight:normal;font-size:14px;margin-left:8px}
   .free{color:var(--green)}
-  .tem{background:var(--card);border-radius:14px;padding:16px}
-  .tem p{font-style:italic;color:var(--muted);font-size:14px}
-  .tem b{display:block;margin-top:8px;font-size:14px}
   .info{background:var(--card);border-radius:14px;padding:16px}
   .info h3{font-size:16px;margin-bottom:6px;color:var(--gold)}
   .info p{color:var(--muted);font-size:14px}
   .liste{list-style:none;display:grid;gap:10px}
   .liste li{background:var(--card);border-radius:12px;padding:14px 16px;font-size:15px}
   .liste li::before{content:"✅ "}
+  .preuves{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;align-items:start}
+  .preuves a{display:block;background:var(--card);border-radius:14px;overflow:hidden}
+  .preuves img{width:100%;height:auto;display:block}
+  .note{text-align:center;color:var(--muted);font-size:13px;max-width:520px;margin:16px auto 0}
   .contact p{color:var(--muted);max-width:480px;margin:0 auto 20px;font-size:15px}
   footer{text-align:center;padding:30px 16px 50px;color:var(--muted);font-size:14px}
 </style>
@@ -77,12 +78,16 @@
   </ul>
 </section>
 
-<!-- AVIS CLIENTS : caché. Remplace par de vrais avis puis enlève le mot "hidden" -->
-<section id="avis" hidden>
-  <h2>Ils nous font confiance</h2>
-  <div class="grid">
-    <div class="tem"><p>« Écris ici le vrai message d'un client. »</p><b>— Prénom du client</b></div>
+<!-- RÉSULTATS DE NOS CLIENTS -->
+<section id="resultats">
+  <h2>Résultats de nos clients</h2>
+  <div class="preuves">
+    <a href="preuve3.jpg" target="_blank"><img src="preuve3.jpg" alt="Première vente d'une cliente et son message de remerciement" loading="lazy"></a>
+    <a href="preuve4.jpg" target="_blank"><img src="preuve4.jpg" alt="Un client avec 2 ventes sur sa boutique" loading="lazy"></a>
+    <a href="preuve1.jpg" target="_blank"><img src="preuve1.jpg" alt="Message de remerciement d'un client" loading="lazy"></a>
+    <a href="preuve2.jpg" target="_blank"><img src="preuve2.jpg" alt="Échange avec un client sur la vente et l'accompagnement" loading="lazy"></a>
   </div>
+  <p class="note">Captures réelles de nos clients, noms masqués. Les résultats varient selon l'effort et l'application de chacun.</p>
 </section>
 
 <!-- QUESTION / PRÉOCCUPATION -->
@@ -136,6 +141,7 @@ document.getElementById("produits").innerHTML = html;
 </script>
 </body>
 </html>
+
 
 
 
