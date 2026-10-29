@@ -57,6 +57,7 @@
 <section id="apprendre">
   <h2>Ce que tu vas apprendre</h2>
   <div class="grid">
+    <div class="info"><h3>👩‍💼 Indépendance financière</h3><p>Gérer ton argent, épargner et lancer une activité pour gagner ta propre indépendance.</p></div>
     <div class="info"><h3>🎁 Cadeaux de fin d'année</h3><p>100 idées de cadeaux pour tous les budgets, pour tes proches.</p></div>
     <div class="info"><h3>🎨 Publicités avec l'IA</h3><p>Créer tes propres publicités gratuitement grâce à l'intelligence artificielle.</p></div>
     <div class="info"><h3>📖 Sourate en 15 minutes</h3><p>Une méthode simple pour apprendre une sourate un peu chaque jour.</p></div>
@@ -76,6 +77,7 @@
     <li>Pour les débutants qui veulent apprendre pas à pas</li>
     <li>Pour les étudiants et jeunes qui veulent se lancer en ligne</li>
     <li>Pour ceux qui veulent vendre leurs produits ou services</li>
+    <li>Pour les femmes qui veulent gagner leur propre argent</li>
     <li>Pour ceux qui n'ont qu'un téléphone et peu de temps</li>
   </ul>
 </section>
@@ -104,6 +106,7 @@
 <script>
 // ====== IMAGES (échange les noms ici si une image est sur le mauvais produit) ======
 var IMG = {
+  femmes:        "",   // <-- mets ici le nom de l'image, ex : "IMG_2310.jpeg"
   cadeaux:       "IMG_2299.jpeg",
   pubIA:         "IMG_2305.jpeg",
   sourate:       "IMG_2221.png",
@@ -119,6 +122,7 @@ var IMG = {
 
 // ====== PRODUITS ======
 var produits = [
+  {emoji:"👩‍💼", titre:"Elle gagne, elle décide : le guide pratique de l’indépendance financière pour les femmes", desc:"Budget, épargne et idées de business pour gagner ta propre indépendance financière.", prix:"2350 F", ancien:"7000 F", image:IMG.femmes, lien:"https://qnmiqbdt.mychariow.shop/prd_vys98uko"},
   {emoji:"🎄", titre:"Le guide des cadeaux de fin d’année : 100 idées pour tous les budgets", desc:"100 idées de cadeaux simples et originales pour toute ta famille.", prix:"2100 F", ancien:"7000 F", image:IMG.cadeaux, lien:"https://qnmiqbdt.mychariow.shop/prd_unsisamj"},
   {emoji:"🎨", titre:"Créer ses propres publicités avec l’IA gratuitement : rien de plus facile en 2026", desc:"Crée de belles publicités facilement avec l’IA, sans dépenser un franc.", prix:"3300 F", ancien:"10 000 F", image:IMG.pubIA, lien:"https://qnmiqbdt.mychariow.shop/prd_9puqdxxy"},
   {emoji:"📖", titre:"Une sourate en 15 minutes", desc:"La méthode simple pour apprendre le Coran en 15 minutes par jour.", prix:"2500 F", ancien:"5000 F", image:IMG.sourate, lien:"https://qnmiqbdt.mychariow.shop/prd_m2draua9"},
@@ -147,6 +151,7 @@ document.getElementById("produits").innerHTML = html;
 </script>
 </body>
 </html>
+
 
 
 
